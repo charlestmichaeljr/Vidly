@@ -241,6 +241,10 @@
     <Compile Include="Migrations\201901031611447_AddReleaseDateToMovie.Designer.cs">
       <DependentUpon>201901031611447_AddReleaseDateToMovie.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901041538596_AddedValidationToMovies.cs" />
+    <Compile Include="Migrations\201901041538596_AddedValidationToMovies.Designer.cs">
+      <DependentUpon>201901041538596_AddedValidationToMovies.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -383,6 +387,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201901031611447_AddReleaseDateToMovie.resx">
       <DependentUpon>201901031611447_AddReleaseDateToMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901041538596_AddedValidationToMovies.resx">
+      <DependentUpon>201901041538596_AddedValidationToMovies.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

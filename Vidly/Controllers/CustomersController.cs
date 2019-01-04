@@ -4,6 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.UI.WebControls;
 using Vidly.Models;
 using Vidly.ViewModels;
 
@@ -35,6 +36,7 @@ namespace Vidly.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Save(Customer customer)
         {
             
@@ -85,7 +87,7 @@ namespace Vidly.Controllers
         // GET: Customers
         public ViewResult Index()
         {
-            return View(_context.Customers.Include(c => c.MembershipType));
+            return View(_context.Customers.Include(c => c.MembershipType).SortBy("Name"));
         }
 
         public ActionResult Details(int id)
