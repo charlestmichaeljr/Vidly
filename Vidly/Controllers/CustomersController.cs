@@ -87,7 +87,7 @@ namespace Vidly.Controllers
         // GET: Customers
         public ViewResult Index()
         {
-            return View(_context.Customers.Include(c => c.MembershipType).SortBy("Name"));
+            return View();
         }
 
         public ActionResult Details(int id)
