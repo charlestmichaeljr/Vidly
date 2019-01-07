@@ -18,7 +18,7 @@
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
-    <IISExpressSSLPort />
+    <IISExpressSSLPort>44307</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
@@ -265,6 +265,18 @@
     <Compile Include="Migrations\201901041538596_AddedValidationToMovies.Designer.cs">
       <DependentUpon>201901041538596_AddedValidationToMovies.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901071810483_SeedUsers.cs" />
+    <Compile Include="Migrations\201901071810483_SeedUsers.Designer.cs">
+      <DependentUpon>201901071810483_SeedUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901071847567_AddDrivingLicenseToApplicationUser.cs" />
+    <Compile Include="Migrations\201901071847567_AddDrivingLicenseToApplicationUser.Designer.cs">
+      <DependentUpon>201901071847567_AddDrivingLicenseToApplicationUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901072147133_AddedPhoneToRegistration.cs" />
+    <Compile Include="Migrations\201901072147133_AddedPhoneToRegistration.Designer.cs">
+      <DependentUpon>201901072147133_AddedPhoneToRegistration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -274,6 +286,7 @@
     <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Min18YearsIfAMember.cs" />
     <Compile Include="Models\Movie.cs" />
+    <Compile Include="Models\RoleName.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\CustomerFormViewModel.cs" />
@@ -514,12 +527,13 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Movies\Random.cshtml" />
     <Content Include="Views\Shared\_NavBar.cshtml" />
-    <Content Include="Views\Movies\Index.cshtml" />
+    <Content Include="Views\Movies\List.cshtml" />
     <Content Include="Views\Customers\Index.cshtml" />
     <Content Include="Views\Movies\Details.cshtml" />
     <Content Include="Views\Customers\Details.cshtml" />
     <Content Include="Views\Customers\CustomerForm.cshtml" />
     <Content Include="Views\Movies\MovieForm.cshtml" />
+    <Content Include="Views\Movies\ReadOnlyList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -586,6 +600,15 @@
     <EmbeddedResource Include="Migrations\201901041538596_AddedValidationToMovies.resx">
       <DependentUpon>201901041538596_AddedValidationToMovies.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901071810483_SeedUsers.resx">
+      <DependentUpon>201901071810483_SeedUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901071847567_AddDrivingLicenseToApplicationUser.resx">
+      <DependentUpon>201901071847567_AddDrivingLicenseToApplicationUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901072147133_AddedPhoneToRegistration.resx">
+      <DependentUpon>201901072147133_AddedPhoneToRegistration.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -605,7 +628,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>50710</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:50710/</IISUrl>
+          <IISUrl>https://localhost:44307/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
